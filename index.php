@@ -50,7 +50,7 @@
 </head>
 <body>
   <div class="d-flex">
-    <?php include("menu.php"); ?>
+    <div class="sidebar" id="menu-container"></div>
 
     <main class="flex-grow-1 p-4" id="contenido">
 		<div class="text-center mb-4">
@@ -110,6 +110,8 @@
 </html>
 <script>
 $(document).ready(function () {
+	
+	 $('#menu-container').load('menu.html');
 
   // Variables con datos quemados por si fallan los WS
   let meses = ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"];
